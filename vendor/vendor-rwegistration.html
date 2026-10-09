@@ -38,6 +38,64 @@
             <input type="text" placeholder="Enter Your Student Id" />
           </p>
         </fieldset>
+
+        <!-- buisness info -->
+        <fieldset>
+          <legend>Business Information</legend>
+          <p>
+            <label for="">Business Name</label><br />
+            <input
+              type="text"
+              placeholder="Enter your business name"
+              required
+            />
+          </p>
+          <p>
+            <label for="">Vendor Type:</label>
+            <br />
+            <select name="" id="" required>
+              <option value="">--Select Vendor Type--</option>
+              <option value="">Product Seller</option>
+              <option value="">Rental Provider</option>
+              <option value="">Seller And Rental Provider</option>
+            </select>
+          </p>
+          <p>
+            <label for="">Main Product Category:</label><br />
+            <select name="" id="" required>
+              <option value="">--Select category--</option>
+              <option value="">Electronics</option>
+              <option value="">Books and Notes</option>
+              <option value="">Clothing</option>
+              <option value="">Furniture</option>
+              <option value="">Vehicles</option>
+              <option value="">Accessories</option>
+              <option value="">Others</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="s">Business Address:</label><br />
+            <textarea
+              id="address"
+              name="address"
+              rows="4"
+              cols="35"
+              placeholder="Enter your business address"
+              required
+            ></textarea>
+          </p>
+          <p>
+            <label for="">Business Description:</label><br />
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              cols="35"
+              placeholder="Describe your products or rental services"
+            ></textarea>
+          </p>
+        </fieldset>
       </form>
     </main>
   </body>
