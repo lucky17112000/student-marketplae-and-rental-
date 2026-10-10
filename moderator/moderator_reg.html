@@ -1,23 +1,54 @@
 <!DOCTYPE html>
-<html >
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Moderator Registration</title>
-    </head>
-    <body>
-        <h1>Moderator Registration</h1>
-        
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - UniHub</title>
+</head>
+<body>
+    <h1>Student Marketplace and Rental</h1>
+    <p><em>Your Campus, Your Marketplace</em></p>
+    <h3>Personal Information</h3>
+        <label for="fullname">Full Name: </label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required size="40"><br><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
+        <label for="username">Username: </label><br>
+        <input type="text" id="username" name="username" placeholder="Choose a unique username" required size="40"><br><br>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
+        <label for="email">Email Address: </label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email (preferably university email)" required size="40"><br><br>
 
-            <button type="submit">Register</button>
-            <button type="reset">Reset</button>
-        </form>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required size="40"><br><br>
+
+        <label for="department">Department / Faculty (for Students):</label><br>
+        <input type="text" id="department" name="department" placeholder="e.g. CSE, EEE, Business" size="40"><br><br>
+
+        <label for="student_id">Student ID (optional for Members):</label><br>
+        <input type="text" id="student_id" name="student_id" placeholder="Enter student ID if available" size="40"><br><br>
+    
+        <h3>Account Security</h3>
+
+        <label for="password">Password: </label><br>
+        <input type="password" id="password" name="password" placeholder="Minimum 8 characters" required minlength="8" size="40"><br><br>
+
+        <label for="confirm_password">Confirm Password:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password" required minlength="8" size="40"><br><br>
+
+        <h3>Terms and Conditions</h3>
+        <label>
+            <input type="checkbox" name="terms" required>
+            I agree to the Terms and Conditions and confirm that the information provided is correct.
+            I understand that all payments and handovers will be done face-to-face.
+        </label><br><br>
+
+        <hr>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear Form">
+    </form>
+    <br>
+    <p>Already have an account? <a href="login.html">Login Here</a></p>
+    <p><a href="home.html">← Back to Home</a></p>
+</body>
 </html>
