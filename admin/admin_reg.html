@@ -1,0 +1,134 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration | UniHub</title>
+</head>
+<body>
+
+    <header>
+        <h1>Student Marketplace and Rental</h1>
+        <p>Your Campus, Your Marketplace</p>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Admin Registration</h2>
+        <p>Create your UniHub Admin Account.</p>
+
+        <form action="" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="fullName">Full Name:</label><br>
+                    <input type="text" id="fullName"
+                           name="fullName"
+                           placeholder="Enter your full name"
+                           required>
+                </p>
+
+                <p>
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username"
+                           name="username"
+                           placeholder="Enter your username"
+                           required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email"
+                           name="email"
+                           placeholder="Enter your email"
+                           required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone"
+                           name="phone"
+                           placeholder="Enter your phone number"
+                           required>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Account Security</legend>
+
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           minlength="8"
+                           placeholder="Minimum 8 characters"
+                           required>
+                </p>
+
+                <p>
+                    <label for="confirmPassword">
+                        Confirm Password:
+                    </label><br>
+                    <input type="password"
+                           id="confirmPassword"
+                           name="confirmPassword"
+                           minlength="8"
+                           placeholder="Repeat password"
+                           required>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+
+                <p>
+                    <input type="checkbox"
+                           id="terms"
+                           name="terms"
+                           required>
+
+                    <label for="terms">
+                        I agree to the Terms and Conditions
+                        and confirm that the information
+                        provided is correct.
+                    </label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <button type="submit">
+                Register as Admin
+            </button>
+
+            <button type="reset">
+                Clear Form
+            </button>
+
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+
+        <p>
+            Already have an admin account?
+            <a href="login.html">Login Here</a>
+        </p>
+
+        <p>&copy; 2026 Student Marketplace and Rental</p>
+    </footer>
+
+</body>
+</html>
