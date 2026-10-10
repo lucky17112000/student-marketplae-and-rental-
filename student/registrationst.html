@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - TradeNest</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <center>
+            <h1>TradeNest</h1>
+            <h3>Campus Marketplace & Rental System</h3>
+        </center>
+    </header>
+
+    <hr>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <center>
+            <a href="index.html">Home</a>
+            &nbsp;&nbsp;&nbsp;
+
+            <a href="login.html">Login</a>
+            &nbsp;&nbsp;&nbsp;
+
+            <a href="public-register.html">
+                Back to Registration
+            </a>
+        </center>
+    </nav>
+
+    <hr>
+
+    <main>
+
+        <center>
+            <h2>Student Registration</h2>
+            <p>Create your student account</p>
+        </center>
+
+        <br>
+
+        <!-- Registration Form -->
+        <form action="#" method="post">
+
+            <table align="center"
+                   cellpadding="10"
+                   border="1">
+
+                <tr>
+                    <td>
+                        <label for="fullName">
+                            Full Name:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="text"
+                               id="fullName"
+                               name="fullName"
+                               placeholder="Enter full name"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="studentId">
+                            Student ID:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="text"
+                               id="studentId"
+                               name="studentId"
+                               placeholder="Enter student ID"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="university">
+                            University Name:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="text"
+                               id="university"
+                               name="university"
+                               placeholder="University name"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">
+                            Email Address:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter email"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="phone">
+                            Phone Number:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="tel"
+                               id="phone"
+                               name="phone"
+                               placeholder="01XXXXXXXXX"
+                               pattern="01[0-9]{9}"
+                               title="Enter 11 digit BD number"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="password">
+                            Password:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Enter password"
+                               minlength="8"
+                               autocomplete="new-password"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="confirmPassword">
+                            Confirm Password:
+                        </label>
+                    </td>
+
+                    <td>
+                        <input type="password"
+                               id="confirmPassword"
+                               name="confirmPassword"
+                               placeholder="Confirm password"
+                               minlength="8"
+                               autocomplete="new-password"
+                               required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+
+                        <button type="submit">
+                            Create Account
+                        </button>
+
+                        &nbsp;&nbsp;
+
+                        <button type="reset">
+                            Clear
+                        </button>
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+        <br>
+
+        <center>
+            <p>
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+
+            <p>
+                <a href="public-register.html">
+                    Back to Registration
+                </a>
+            </p>
+        </center>
+
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <center>
+            <p>
+                &copy; 2026 TradeNest.
+                All Rights Reserved.
+            </p>
+        </center>
+    </footer>
+
+</body>
+</html>
