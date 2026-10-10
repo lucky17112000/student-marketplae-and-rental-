@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Registarion | Student marketplace and Rental</title>
+  </head>
+  <body>
+    <header>
+      <h1>Student Marketplae and rental</h1>
+      <p>Your campus Your Marketplace</p>
+      <hr />
+    </header>
+
+    <main>
+      <h2>Vendor Registration</h2>
+      <p>
+        Create Your Vendor Account To sell Product and offer Rental Service...
+      </p>
+      <form action="">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <p>
+            <label for="">Full Name:</label><br />
+            <input type="text" placeholder="Enter Your Full Name" required />
+          </p>
+
+          <p>
+            <label for="">Email Address:</label><br />
+            <input type="email" placeholder="Enter Your Email" required />
+          </p>
+          <p>
+            <label for="">Phone number:</label><br />
+            <input type="tel" placeholder="Enter Your Phone number" required />
+          </p>
+          <p>
+            <label for="">Student Id(Optional)</label><br />
+            <input type="text" placeholder="Enter Your Student Id" />
+          </p>
+        </fieldset>
+
+        <!-- buisness info -->
+        <fieldset>
+          <legend>Business Information</legend>
+          <p>
+            <label for="">Business Name</label><br />
+            <input
+              type="text"
+              placeholder="Enter your business name"
+              required
+            />
+          </p>
+          <p>
+            <label for="">Vendor Type:</label>
+            <br />
+            <select name="" id="" required>
+              <option value="">--Select Vendor Type--</option>
+              <option value="">Product Seller</option>
+              <option value="">Rental Provider</option>
+              <option value="">Seller And Rental Provider</option>
+            </select>
+          </p>
+          <p>
+            <label for="">Main Product Category:</label><br />
+            <select name="" id="" required>
+              <option value="">--Select category--</option>
+              <option value="">Electronics</option>
+              <option value="">Books and Notes</option>
+              <option value="">Clothing</option>
+              <option value="">Furniture</option>
+              <option value="">Vehicles</option>
+              <option value="">Accessories</option>
+              <option value="">Others</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="s">Business Address:</label><br />
+            <textarea
+              id="address"
+              name="address"
+              rows="4"
+              cols="35"
+              placeholder="Enter your business address"
+              required
+            ></textarea>
+          </p>
+          <p>
+            <label for="">Business Description:</label><br />
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              cols="35"
+              placeholder="Describe your products or rental services"
+            ></textarea>
+          </p>
+        </fieldset>
+
+        <br />
+        <fieldset>
+          <legend>Account Security:</legend>
+          <p>
+            <label for="">Password:</label><br />
+            <input
+              type="password"
+              minlength="8"
+              placeholder="Minimum 8 char"
+              required
+            />
+          </p>
+          <p>
+            <label for="">Confirm Password:</label><br />
+            <input type="password" required placeholder="Repeat password" />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Terms and Conditions</legend>
+
+          <p>
+            <input type="checkbox" required />
+            <label for="terms">
+              I agree to the Terms and Conditions and confirm that the
+              information provided is correct.
+            </label>
+          </p>
+        </fieldset>
+        <br />
+        <button type="submit">Register As vendor:</button>
+        <button type="reset">Clear Form</button>
+      </form>
+    </main>
+    <footer>
+      <hr />
+      <p>
+        Already have a vendor account?
+        <a href="login.html">Login Here</a>
+
+        <p>&copy; 2026 Student Marketplace and Rental</p>
+      </p>
+    </footer>
+  </body>
+</html>
