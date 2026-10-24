@@ -57,12 +57,41 @@ main>p {
 }
 
 fieldset {
-    border: 1px solid #dbe3ec;
-    border-radius: 10px;
-    padding: 24px;
-    margin: 0 0 24px;
     background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin: 0 0 28px;
+   
+      border-color: #99f6e4;
+    box-shadow: 0 8px 22px rgba(20, 21, 24, 0.08);
+    position: relative;
+  
 }
+.card-tooltip {
+    position: absolute;
+    top: -25px;
+    right: 16px;
+
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0d9488;
+    color: #ffffff;
+
+    border: 4px solid #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: help;
+    /* box-sizing: content-box; */
+}
+
 
 legend {
     font-size: 17px;
@@ -118,6 +147,8 @@ form fieldset p:last-child {
 }
 
 button {
+    width: 250px;
+    height: 40px;
     padding: 12px 22px;
     border: none;
     border-radius: 7px;
@@ -140,4 +171,116 @@ button[type="reset"] {
 
 button[type="reset"]:hover {
     background-color: #475569;
+}
+
+
+/* Stylish Dark Footer */
+footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 35px 20px 20px;
+    font-size: 14px;
+    border-top: 4px solid #0d9488;
+}
+
+/* Footer Divider */
+footer hr {
+    border: none;
+    width: 60px;
+    height: 3px;
+    background-color: #0d9488;
+    margin: 0 auto 24px;
+    border-radius: 5px;
+}
+
+/* Footer Paragraphs */
+footer p {
+    margin: 12px 0;
+    line-height: 1.7;
+}
+
+/* Login Link */
+footer a {
+    display: inline-block;
+    color: #5eead4;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Login Link Hover */
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* laptop  */
+@media(max-width:768px) {
+    main {
+        width: 94%;
+        padding: 24px;
+        margin: 24px auto;
+    }
+
+    .site-header {
+        padding: 28px 16px;
+    }
+
+    fieldset {
+        padding: 20px;
+    }
+
+}
+
+/* mobile */
+@media(max-width:480px) {
+    main {
+        width: 100%;
+        padding: 20px 16px;
+        margin: 16px auto;
+        border-radius: 0;
+    }
+
+    .site-header {
+        padding: 24px 12px;
+    }
+
+    .site-title {
+        font-size: 23px;
+    }
+
+    .site-tagline {
+        font-size: 14px;
+    }
+
+    main h2 {
+        font-size: 24px;
+    }
+
+    fieldset {
+        padding: 16px 12px;
+        margin-bottom: 20px;
+    }
+
+    legend {
+        font-size: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        padding: 28px 16px 18px;
+    }
 }
