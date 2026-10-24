@@ -1,0 +1,290 @@
+/* ===== General Page Design ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #334155;
+}
+
+
+/* ===== Header ===== */
+header {
+    background-color: #123047;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+header h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    color: #d5e5ef;
+}
+
+
+/* ===== Horizontal Line ===== */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #0d9488;
+    margin: 0;
+}
+
+
+/* ===== Navigation Bar ===== */
+nav {
+    background-color: #ffffff;
+    padding: 5px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav table {
+    margin: auto;
+}
+
+nav td {
+    padding: 12px 18px;
+}
+
+nav a {
+    color: #123047;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #0d9488;
+}
+
+
+/* ===== Register Dropdown ===== */
+details {
+    position: relative;
+}
+
+summary {
+    color: #123047;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+summary:hover {
+    color: #0d9488;
+}
+
+details p {
+    margin: 10px 0;
+}
+
+details a {
+    font-size: 14px;
+}
+
+
+/* ===== Main Content ===== */
+main {
+    max-width: 900px;
+    width: 90%;
+    margin: 35px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(20, 21, 24, 0.08);
+    box-sizing: border-box;
+}
+
+
+/* ===== Welcome Section ===== */
+main section:first-child {
+    padding: 20px 10px;
+}
+
+main section:first-child h2 {
+    color: #123047;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+main section:first-child p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+main section:first-child strong {
+    color: #087f5b;
+    font-size: 17px;
+}
+
+
+/* ===== All Main Headings ===== */
+main h2 {
+    color: #123047;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* ===== Services Table ===== */
+main table {
+    width: 100%;
+    border-spacing: 15px;
+}
+
+main table td {
+    background-color: #f8fafc;
+    padding: 18px;
+    border: 1px solid #ccfbf1;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+}
+
+main table td:first-child {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+/* ===== About Section ===== */
+#about {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f8fafc;
+    border-left: 5px solid #0d9488;
+    border-radius: 8px;
+}
+
+#about h2 {
+    color: #087f5b;
+    margin-top: 0;
+}
+
+#about p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+
+/* ===== Footer ===== */
+footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #5eead4;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* ===== Tablet Responsive ===== */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        width: 94%;
+        padding: 24px;
+        margin: 25px auto;
+    }
+
+    nav td {
+        padding: 10px;
+    }
+
+    nav a,
+    summary {
+        font-size: 14px;
+    }
+}
+
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 480px) {
+
+    header {
+        padding: 24px 12px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    header h3 {
+        font-size: 14px;
+    }
+
+    nav table {
+        width: 100%;
+    }
+
+    nav td {
+        display: block;
+        text-align: center;
+        padding: 8px;
+    }
+
+    main {
+        width: 94%;
+        padding: 18px;
+        margin: 20px auto;
+    }
+
+    main section:first-child h2 {
+        font-size: 25px;
+    }
+
+    main table,
+    main tbody,
+    main tr,
+    main td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main table td {
+        margin-bottom: 10px;
+    }
+
+    main table td:first-child {
+        display: none;
+    }
+
+    #about {
+        padding: 18px;
+    }
+
+    footer {
+        padding: 22px 12px;
+    }
+}
