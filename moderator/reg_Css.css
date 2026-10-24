@@ -1,0 +1,170 @@
+/* ===== General Reset & Body ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== Main Container ===== */
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Headings ===== */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+h3 {
+    color: #4a5568;
+    margin: 25px 0 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 6px;
+}
+
+/* ===== Form Elements ===== */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1.5px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* ===== Terms Checkbox ===== */
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #4a5568;
+    line-height: 1.5;
+    margin: 10px 0 25px;
+    font-weight: normal;
+}
+
+.terms input[type="checkbox"] {
+    margin-top: 3px;
+    width: 16px;
+    height: 16px;
+    accent-color: #667eea;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+input[type="submit"] {
+    background: #667eea;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background: #5a6fd8;
+    transform: translateY(-1px);
+}
+
+input[type="reset"] {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+input[type="reset"]:hover {
+    background: #cbd5e0;
+}
+
+/* ===== Links ===== */
+.links {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.links a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
