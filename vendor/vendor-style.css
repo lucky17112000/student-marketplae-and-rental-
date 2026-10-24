@@ -107,3 +107,37 @@ textarea:focus {
     outline: 2px solid #99f6e4;
     border-color: #0d9488;
 }
+
+form fieldset p {
+    margin: 0 0 20px;
+
+}
+
+form fieldset p:last-child {
+    margin-bottom: 0;
+}
+
+button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    background-color: #087f5b;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #066548;
+}
+
+button[type="reset"] {
+    background-color: #64748b;
+}
+
+button[type="reset"]:hover {
+    background-color: #475569;
+}
