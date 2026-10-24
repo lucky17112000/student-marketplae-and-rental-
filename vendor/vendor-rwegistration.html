@@ -1,95 +1,151 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vendor Registarion | Student marketplace and Rental</title>
+
+  <title>Vendor Registration | Student Marketplace and Rental</title>
+
   <link rel="stylesheet" href="vendor-style.css" />
 </head>
 
 <body>
+
   <header class="site-header">
-    <h1 class="site-title">Student Marketplae and rental</h1>
-    <p class="site-tagline">Your campus Your Marketplace</p>
+    <h1 class="site-title">Student Marketplace and Rental</h1>
+    <p class="site-tagline">Your Campus, Your Marketplace</p>
     <hr class="header-divider" />
   </header>
 
   <main>
     <h2>Vendor Registration</h2>
+
     <p>
-      Create Your Vendor Account To sell Product and offer Rental Service...
+      Create Your Vendor Account To Sell Products and Offer Rental Services.
     </p>
-    <form action="">
+
+    <form action="" method="post">
+
+      <!-- Personal Information -->
       <fieldset>
         <legend>Personal Information</legend>
-        <span class="card-tooltip " title="Enter your personal information">i</span>
+
+        <span class="card-tooltip" title="Enter your personal information">?</span>
+
         <p>
-          <label for="">Full Name:</label><br />
-          <input type="text" placeholder="Enter Your Full Name" required />
+          <label for="full-name">Full Name:</label><br />
+          <input
+            type="text"
+            id="full-name"
+            name="fullName"
+            placeholder="Enter Your Full Name"
+            required
+          />
         </p>
 
         <p>
-          <label for="">Email Address:</label><br />
-          <input type="email" placeholder="Enter Your Email" required />
+          <label for="email">Email Address:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter Your Email"
+            required
+          />
         </p>
+
         <p>
-          <label for="">Phone number:</label><br />
-          <input type="tel" placeholder="Enter Your Phone number" required />
+          <label for="phone">Phone Number:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter Your Phone Number"
+            required
+          />
         </p>
+
         <p>
-          <label for="">Student Id(Optional)</label><br />
-          <input type="text" placeholder="Enter Your Student Id" />
+          <label for="student-id">Student ID (Optional):</label><br />
+          <input
+            type="text"
+            id="student-id"
+            name="studentId"
+            placeholder="Enter Your Student ID"
+          />
         </p>
       </fieldset>
 
-      <!-- buisness info -->
+      <!-- Business Information -->
       <fieldset>
         <legend>Business Information</legend>
+
+        <span class="card-tooltip" title="Enter your business information">?</span>
+
         <p>
-          <label for="">Business Name</label><br />
-          <span class="card-tooltip" title="Enter your Buisness information">i</span>
-          <input type="text" placeholder="Enter your business name" required />
+          <label for="business-name">Business Name:</label><br />
+          <input
+            type="text"
+            id="business-name"
+            name="businessName"
+            placeholder="Enter Your Business Name"
+            required
+          />
         </p>
+
         <p>
-          <label for="">Vendor Type:</label>
-          <br />
-          <select name="" id="" required>
-            <option value="">--Select Vendor Type--</option>
-            <option value="">Product Seller</option>
-            <option value="">Rental Provider</option>
-            <option value="">Seller And Rental Provider</option>
-          </select>
-        </p>
-        <p>
-          <label for="">Main Product Category:</label><br />
-          <select name="" id="" required>
-            <option value="">--Select category--</option>
-            <option value="">Electronics</option>
-            <option value="">Books and Notes</option>
-            <option value="">Clothing</option>
-            <option value="">Furniture</option>
-            <option value="">Vehicles</option>
-            <option value="">Accessories</option>
-            <option value="">Others</option>
+          <label for="vendor-type">Vendor Type:</label><br />
+          <select id="vendor-type" name="vendorType" required>
+            <option value="">-- Select Vendor Type --</option>
+            <option value="product-seller">Product Seller</option>
+            <option value="rental-provider">Rental Provider</option>
+            <option value="both">Seller and Rental Provider</option>
           </select>
         </p>
 
         <p>
-          <label for="s">Business Address:</label><br />
-          <textarea id="address" name="address" rows="4" cols="35" placeholder="Enter your business address"
-            required></textarea>
+          <label for="product-category">Main Product Category:</label><br />
+          <select id="product-category" name="productCategory" required>
+            <option value="">-- Select Category --</option>
+            <option value="electronics">Electronics</option>
+            <option value="books-notes">Books and Notes</option>
+            <option value="clothing">Clothing</option>
+            <option value="furniture">Furniture</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="accessories">Accessories</option>
+            <option value="others">Others</option>
+          </select>
         </p>
+
         <p>
-          <label for="">Business Description:</label><br />
-          <textarea id="description" name="description" rows="4" cols="35"
-            placeholder="Describe your products or rental services"></textarea>
+          <label for="address">Business Address:</label><br />
+          <textarea
+            id="address"
+            name="address"
+            rows="4"
+            placeholder="Enter Your Business Address"
+            required
+          ></textarea>
+        </p>
+
+        <p>
+          <label for="description">Business Description:</label><br />
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            placeholder="Describe Your Products or Rental Services"
+          ></textarea>
         </p>
       </fieldset>
 
+      <!-- Account Security -->
       <fieldset>
-        <legend>Account Security:</legend>
-        <span class="card-tooltip" title="Account Security:">?</span>
+        <legend>Account Security</legend>
+
+        <span class="card-tooltip" title="Create a secure password">?</span>
 
         <p>
           <label for="password">Password:</label><br />
@@ -108,17 +164,27 @@
           <input
             type="password"
             id="confirm-password"
-            name="confirm-password"
-            placeholder="Repeat password"
+            name="confirmPassword"
+            minlength="8"
+            placeholder="Repeat Your Password"
             required
           />
         </p>
       </fieldset>
 
+      <!-- Terms and Conditions -->
       <fieldset>
         <legend>Terms and Conditions</legend>
+
+        <span class="card-tooltip" title="Please accept the terms to register">?</span>
+
         <p>
-          <input type="checkbox" id="terms" name="terms" required />
+          <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required
+          />
           <label for="terms">
             I agree to the Terms and Conditions and confirm that the
             information provided is correct.
@@ -126,44 +192,26 @@
         </p>
       </fieldset>
 
+      <!-- Form Buttons -->
       <br />
-      <button type="submit">Register As vendor:</button>
+
+      <button type="submit">Register As Vendor</button>
       <button type="reset">Clear Form</button>
+
     </form>
   </main>
 
+  <!-- Footer -->
   <footer>
     <hr />
+
     <p>
       Already have a vendor account?
       <a href="../common/login/login.html" target="_blank">Login Here</a>
     </p>
 
-      <fieldset>
-        <legend>Terms and Conditions</legend>
-        <span class="card-tooltip " title="Enter your personal information">i</span>
-
-        <p>
-          <input type="checkbox" required />
-          <label for="terms">
-            I agree to the Terms and Conditions and confirm that the
-            information provided is correct.
-          </label>
-        </p>
-      </fieldset>
-      <br />
-      <button type="submit">Register As vendor:</button>
-      <button type="reset">Clear Form</button>
-    </form>
-  </main>
-  <footer>
-    <hr />
-    <p>
-      Already have a vendor account?
-      <a href="login.html">Login Here</a>
-    </p>
     <p>&copy; 2026 Student Marketplace and Rental</p>
   </footer>
-</body>
 
+</body>
 </html>
