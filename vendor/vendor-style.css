@@ -40,3 +40,30 @@ main {
     box-sizing: border-box;
 
 }
+main h2{
+    font-size:28px;
+    color: #123047;
+    margin:0 0 12px;
+
+}
+main > p{
+    font-size:15px;
+    color: #64748b;
+    /* line-height: 1.6; */
+      margin: 0 0 28px;
+    
+}
+fieldset{
+    border:1px solid #dbe3ec;
+    border-radius: 10px;
+    padding: 24px;
+    margin:0 0  24px;
+    background-color: #ffffff;
+}
+legend{
+    font-size:17px;
+    font-weight: 700;
+     color: #087f5b;
+     padding: 0 10px;
+
+}
