@@ -1,4 +1,5 @@
-/* ===== General Reset & Body ===== */
+```css
+/* General Reset & Body */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: #f1f5f9;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,45 +16,49 @@ body {
     padding: 20px;
 }
 
-/* ===== Main Container ===== */
+
+/* Main Container */
 .container {
-    background: #ffffff;
+    background-color: #ffffff;
     width: 100%;
     max-width: 520px;
     padding: 40px 35px;
-    border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 1px solid #99f6e4;
+    box-shadow: 0 8px 22px rgba(20, 21, 24, 0.08);
 }
 
-/* ===== Headings ===== */
+
+/* Headings */
 h1 {
     text-align: center;
-    color: #333;
+    color: #123047;
     font-size: 26px;
     margin-bottom: 5px;
 }
 
 .tagline {
     text-align: center;
-    color: #666;
+    color: #64748b;
     margin-bottom: 30px;
     font-size: 15px;
 }
 
 h3 {
-    color: #4a5568;
+    color: #087f5b;
     margin: 25px 0 15px;
     font-size: 18px;
-    border-bottom: 2px solid #e2e8f0;
+    border-bottom: 2px solid #99f6e4;
     padding-bottom: 6px;
 }
 
-/* ===== Form Elements ===== */
+
+/* Form Elements */
 label {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
-    color: #2d3748;
+    color: #334155;
     font-size: 14px;
 }
 
@@ -64,28 +69,32 @@ input[type="password"] {
     width: 100%;
     padding: 12px 14px;
     margin-bottom: 18px;
-    border: 1.5px solid #cbd5e0;
-    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #1e293b;
     font-size: 15px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
 }
 
+
+/* Input Focus */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="password"]:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+    outline: 2px solid #99f6e4;
+    border-color: #0d9488;
 }
 
-/* ===== Terms Checkbox ===== */
+
+/*  Terms Checkbox  */
 .terms {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     font-size: 13.5px;
-    color: #4a5568;
+    color: #475569;
     line-height: 1.5;
     margin: 10px 0 25px;
     font-weight: normal;
@@ -95,10 +104,11 @@ input[type="password"]:focus {
     margin-top: 3px;
     width: 16px;
     height: 16px;
-    accent-color: #667eea;
+    accent-color: #0d9488;
 }
 
-/* ===== Buttons ===== */
+
+/*  Buttons  */
 .buttons {
     display: flex;
     gap: 12px;
@@ -110,61 +120,94 @@ input[type="reset"] {
     flex: 1;
     padding: 13px;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 7px;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease;
 }
 
+
+/*  Submit Button */
 input[type="submit"] {
-    background: #667eea;
-    color: white;
+    background-color: #087f5b;
+    color: #ffffff;
 }
 
 input[type="submit"]:hover {
-    background: #5a6fd8;
-    transform: translateY(-1px);
+    background-color: #066548;
 }
 
+
+/*  Reset Button  */
 input[type="reset"] {
-    background: #e2e8f0;
-    color: #4a5568;
+    background-color: #64748b;
+    color: #ffffff;
 }
 
 input[type="reset"]:hover {
-    background: #cbd5e0;
+    background-color: #475569;
 }
 
-/* ===== Links ===== */
+
+/*  Links  */
 .links {
     text-align: center;
     margin-top: 18px;
     font-size: 14px;
-    color: #4a5568;
+    color: #64748b;
 }
 
 .links a {
-    color: #667eea;
+    color: #0d9488;
     text-decoration: none;
     font-weight: 600;
 }
 
 .links a:hover {
+    color: #087f5b;
     text-decoration: underline;
 }
 
-/* ===== Responsive ===== */
+
+/* Laptop */
+@media (max-width: 768px) {
+    .container {
+        width: 94%;
+        padding: 35px 28px;
+    }
+}
+
+
+/*  Mobile  */
 @media (max-width: 480px) {
     .container {
+        width: 100%;
         padding: 30px 20px;
+        border-radius: 8px;
     }
 
     h1 {
         font-size: 22px;
     }
 
+    .tagline {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        font-size: 16px;
+    }
+
     .buttons {
         flex-direction: column;
     }
 }
+```
