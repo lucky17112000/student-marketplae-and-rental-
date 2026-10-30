@@ -134,3 +134,27 @@ function descriptionCheck() {
     return true;
   }
 }
+function passwordCheck() {
+  const passwordPattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!*?&])[A-Za-z\d@$!*?&]{8,}$/;
+  const passwordText = document.getElementById("password").value;
+  if (passwordText === "") {
+    document.getElementById("passwordError").innerHTML =
+      "Password must provide";
+    return false;
+  } else if (!passwordPattern.test(passwordText)) {
+    document.getElementById("passwordError").innerHTML =
+      "Password must contain:<br>" +
+      "- Minimum 8 characters<br>" +
+      "- At least one uppercase letter (A-Z)<br>" +
+      "- At least one lowercase letter (a-z)<br>" +
+      "- At least one number (0-9)<br>" +
+      "- At least one special character (@$!%*?&)";
+    return false;
+  } else {
+    document.getElementById("passwordError").innerHTML = "";
+    return true;
+  }
+}
+
+function confirmPasswordCheck() {}

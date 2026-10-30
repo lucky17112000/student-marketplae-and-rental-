@@ -10,6 +10,7 @@ const validateVendorForm = () => {
     productCategoryCheck(),
     addressCheck(),
     descriptionCheck(),
+    passwordCheck(),
   ];
   return validationList.every((result) => {
     if (result) return true;
