@@ -119,3 +119,18 @@ function addressCheck() {
   }
   // textAreaError
 }
+
+function descriptionCheck() {
+  // descriptionError
+  const descriptionText = document.getElementById("description").value;
+  if (descriptionText === "") {
+    document.getElementById("descriptionError").innerHTML = "";
+    return true;
+  } else if (descriptionText.length < 20) {
+    document.getElementById("descriptionError").innerHTML = "At lest 20 char";
+    return false;
+  } else {
+    document.getElementById("descriptionError").innerHTML = "";
+    return true;
+  }
+}
