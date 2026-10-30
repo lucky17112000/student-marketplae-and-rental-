@@ -93,6 +93,29 @@ function vendorTypeCheck() {
 function productCategoryCheck() {
   const productcategoryText = document.getElementById("product-category").value;
   if (productcategoryText === "") {
-    document.getElementById();
+    document.getElementById("productcategoryError").innerHTML =
+      "Select Your product Category";
+    return false;
+  } else {
+    document.getElementById("productcategoryError").innerHTML = "";
+    return true;
   }
+}
+
+function addressCheck() {
+  const addressText = document.getElementById("address").value;
+  console.log(addressText.length);
+  if (addressText === "") {
+    document.getElementById("textAreaError").innerHTML =
+      "write your buisness Adress ";
+    return false;
+  } else if (addressText.length < 10) {
+    document.getElementById("textAreaError").innerHTML =
+      "Adress Atleast 10 char";
+    return false;
+  } else {
+    document.getElementById("textAreaError").innerHTML = "";
+    return true;
+  }
+  // textAreaError
 }
