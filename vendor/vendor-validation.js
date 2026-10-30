@@ -46,3 +46,22 @@ function phoneCheck() {
     return true;
   }
 }
+function studentIdCheck() {
+  const studentIdText = document.getElementById("student-id").value;
+  const studentIdPattern = /^\d{2}-\d{5}-\d$/;
+  if (studentIdText == "") {
+    document.getElementById("studentIdError").innerHTML = "";
+    return true;
+  } else if (!studentIdPattern.test(studentIdText)) {
+    document.getElementById("studentIdError").innerHTML =
+      "Invalid Student ID. Example: 22-12345-1";
+    return false;
+  } else {
+    document.getElementById("studentIdError").innerHTML = "";
+    return true;
+  }
+}
+
+function businessNameCheck() {
+  const businessNamePattern = /^[A-Za-z0-9 ]{3,}$/;
+}
