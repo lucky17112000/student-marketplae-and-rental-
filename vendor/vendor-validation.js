@@ -29,3 +29,20 @@ function emailCheck() {
     return true;
   }
 }
+
+function phoneCheck() {
+  const phoneText = document.getElementById("phone").value;
+  const phonePattern = /^01[3-9]\d{8}$/;
+  if (phoneText === "") {
+    document.getElementById("phoneError").innerHTML =
+      "Phone Number Cannot be Empty";
+    return false;
+  } else if (!phonePattern.test(phoneText)) {
+    document.getElementById("phoneError").innerHTML =
+      "Please enter a valid Bangladeshi phone number";
+    return false;
+  } else {
+    document.getElementById("phoneError").innerHTML = "";
+    return true;
+  }
+}
