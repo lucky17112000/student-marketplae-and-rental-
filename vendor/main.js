@@ -11,6 +11,7 @@ const validateVendorForm = () => {
     addressCheck(),
     descriptionCheck(),
     passwordCheck(),
+    confirmPasswordCheck(),
   ];
   return validationList.every((result) => {
     if (result) return true;

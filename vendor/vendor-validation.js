@@ -136,7 +136,7 @@ function descriptionCheck() {
 }
 function passwordCheck() {
   const passwordPattern =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!*?&])[A-Za-z\d@$!*?&]{8,}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!*?&#])[A-Za-z\d@$!*?&#]{8,}$/;
   const passwordText = document.getElementById("password").value;
   if (passwordText === "") {
     document.getElementById("passwordError").innerHTML =
@@ -157,4 +157,19 @@ function passwordCheck() {
   }
 }
 
-function confirmPasswordCheck() {}
+function confirmPasswordCheck() {
+  const confirmPasswordText = document.getElementById("confirm-password").value;
+  const passwordText = document.getElementById("password").value;
+  if (confirmPasswordText === "") {
+    document.getElementById("confirmPasswordError").innerHTML =
+      "Must fill the field";
+    return false;
+  } else if (confirmPasswordText !== passwordText) {
+    document.getElementById("confirmPasswordError").innerHTML =
+      "Not match with ur password";
+    return false;
+  } else {
+    document.getElementById("confirmPasswordError").innerHTML = "";
+    return true;
+  }
+}
