@@ -105,13 +105,15 @@
           </p>
 
           <p>
-            <label for="vendor-type">Vendor Type:</label><br />
+            <label for="vendor-type">Select Vendor Type:</label><br />
             <select id="vendor-type" name="vendorType" required>
               <option value="">-- Select Vendor Type --</option>
               <option value="product-seller">Product Seller</option>
               <option value="rental-provider">Rental Provider</option>
               <option value="both">Seller and Rental Provider</option>
             </select>
+
+            <span id="vendorTypeError"></span>
           </p>
 
           <p>

@@ -78,3 +78,21 @@ function businessNameCheck() {
     return true;
   }
 }
+
+function vendorTypeCheck() {
+  const vendorTypeText = document.getElementById("vendor-type").value;
+  if (vendorTypeText === "") {
+    document.getElementById("vendorTypeError").innerHTML = "select vendor type";
+    return false;
+  } else {
+    document.getElementById("vendorTypeError").innerHTML = "";
+    return true;
+  }
+}
+
+function productCategoryCheck() {
+  const productcategoryText = document.getElementById("product-category").value;
+  if (productcategoryText === "") {
+    document.getElementById();
+  }
+}
