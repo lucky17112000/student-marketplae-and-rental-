@@ -5,6 +5,7 @@ const validateVendorForm = () => {
     emailCheck(),
     phoneCheck(),
     studentIdCheck(),
+    businessNameCheck(),
   ];
   return validationList.every((result) => {
     if (result) return true;

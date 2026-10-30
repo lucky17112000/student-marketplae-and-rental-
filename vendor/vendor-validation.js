@@ -64,4 +64,17 @@ function studentIdCheck() {
 
 function businessNameCheck() {
   const businessNamePattern = /^[A-Za-z0-9 ]{3,}$/;
+  const buisnessText = document.getElementById("business-name").value;
+  if (buisnessText === "") {
+    document.getElementById("businessNameError").innerHTML =
+      "Buisness field not be empty";
+    return false;
+  } else if (!businessNamePattern.test(buisnessText)) {
+    document.getElementById("businessNameError").innerHTML =
+      "provide valid buisness name";
+    return false;
+  } else {
+    document.getElementById("businessNameError").innerHTML = "";
+    return true;
+  }
 }
