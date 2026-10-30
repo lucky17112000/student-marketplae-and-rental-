@@ -173,3 +173,14 @@ function confirmPasswordCheck() {
     return true;
   }
 }
+
+function termsCheck() {
+  const termsChecked = document.getElementById("terms").checked;
+  if (termsChecked) {
+    document.getElementById("termsError").innerHTML = "";
+    return true;
+  } else {
+    document.getElementById("termsError").innerHTML = "select one";
+    return false;
+  }
+}
