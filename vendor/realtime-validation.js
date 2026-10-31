@@ -13,3 +13,10 @@ document.querySelectorAll("input, select, textarea").forEach((field) => {
     else if (field.id === "confirm-password") confirmPasswordCheck();
   });
 });
+
+const vendorForm = document.querySelector("form");
+vendorForm.addEventListener("reset", () => {
+  document.querySelectorAll(".error-message").forEach((error) => {
+    error.innerHTML = " ";
+  });
+});
