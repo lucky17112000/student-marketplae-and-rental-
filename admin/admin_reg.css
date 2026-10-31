@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -15,7 +16,6 @@ body {
     background-color: #203b5c;
     color: white;
     padding: 25px;
-    box-shadow: 0 3px 8px gray;
     text-align: center;
 }
 
@@ -28,11 +28,38 @@ body {
     margin: 5px 0;
 }
 
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #142940;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+}
+
+.navbar a:hover {
+    background-color: #315fbd;
+}
+
+.navbar a.active {
+    background-color: #4ba99d;
+    color: black;
+}
+
+
 .main-content {
     width: 90%;
     max-width: 750px;
     margin: 35px auto;
-    padding: 25px;
+    padding: 25px 0px;
     background-color: white;
     border: 1px solid #dce3eb;
     border-radius: 10px;
@@ -40,15 +67,20 @@ body {
 }
 
 .main-content h2 {
+    margin: 0;
     text-align: center;
     color: #203b5c;
     font-size: 26px;
+    padding: 0px 0px;
+    top: 0px;
 }
 
 .intro-text {
+    margin: 0;
     text-align: center;
     color: #68778a;
 }
+
 
 .registration-form fieldset {
     margin-bottom: 20px;
@@ -63,11 +95,14 @@ body {
     font-weight: bold;
 }
 
+
 .registration-form label {
     display: block;
+    color: #34465c;
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 
 .input-field {
     display: block;
@@ -81,6 +116,7 @@ body {
 .input-field:hover {
     border-color: #315fbd;
 }
+
 
 #terms {
     width: 16px;
@@ -98,8 +134,10 @@ body {
     font-weight: normal;
 }
 
+
 .form-buttons {
     display: flex;
+    justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
@@ -109,7 +147,6 @@ body {
     border: 1px solid #c5d0dc;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .submit-button {
@@ -130,6 +167,7 @@ body {
     background-color: #dce4ee;
 }
 
+
 .site-footer {
     background-color: #203b5c;
     color: white;
@@ -144,4 +182,12 @@ body {
 
 .site-footer a:hover {
     color: white;
+}
+
+
+#validationMessage {
+    margin: 18px 15px 0;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
 }

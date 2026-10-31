@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Admin Registration | UniHub</title>
+
+ 
     <link rel="stylesheet" href="admin_reg.css">
+
+   
+    <script src="admin_reg.js" defer></script>
+
 </head>
 <body>
 
@@ -14,33 +21,64 @@
         <p>Your Campus, Your Marketplace</p>
     </header>
 
+    <nav class="navbar">
+        <a href="../common/Home%20page/home.html">Home</a>
+        <a href="../common/login/login.html">Login</a>
+        <a href="admin_reg.html" class="active">Admin Registration</a>
+    </nav>
+
     <main class="main-content">
+
         <h2>Admin Registration</h2>
         <p class="intro-text">Create your UniHub Admin Account.</p>
 
-        <form class="registration-form" action="" method="post">
+        <form class="registration-form"
+              action=""
+              method="post"
+              novalidate
+              onsubmit="return validateAdminForm()">
 
             <fieldset>
                 <legend>Personal Information</legend>
 
                 <p>
                     <label for="fullName">Full Name:</label>
-                    <input type="text" class="input-field" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    <input type="text"
+                           class="input-field"
+                           id="fullName"
+                           name="fullName"
+                           placeholder="Enter your full name"
+                           required>
                 </p>
 
                 <p>
                     <label for="username">Username:</label>
-                    <input type="text" class="input-field" id="username" name="username" placeholder="Enter your username" required>
+                    <input type="text"
+                           class="input-field"
+                           id="username"
+                           name="username"
+                           placeholder="Example: adm_rahim123"
+                           required>
                 </p>
 
                 <p>
                     <label for="email">Email Address:</label>
-                    <input type="email" class="input-field" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email"
+                           class="input-field"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email"
+                           required>
                 </p>
 
                 <p>
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" class="input-field" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    <input type="tel"
+                           class="input-field"
+                           id="phone"
+                           name="phone"
+                           placeholder="Enter your phone number"
+                           required>
                 </p>
             </fieldset>
 
@@ -49,12 +87,22 @@
 
                 <p>
                     <label for="password">Password:</label>
-                    <input type="password" class="input-field" id="password" name="password" minlength="8" placeholder="Minimum 8 characters" required>
+                    <input type="password"
+                           class="input-field"
+                           id="password"
+                           name="password"
+                           placeholder="Minimum 12 characters"
+                           required>
                 </p>
 
                 <p>
                     <label for="confirmPassword">Confirm Password:</label>
-                    <input type="password" class="input-field" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="Repeat password" required>
+                    <input type="password"
+                           class="input-field"
+                           id="confirmPassword"
+                           name="confirmPassword"
+                           placeholder="Repeat password"
+                           required>
                 </p>
             </fieldset>
 
@@ -62,7 +110,11 @@
                 <legend>Terms and Conditions</legend>
 
                 <p class="terms-row">
-                    <input type="checkbox" id="terms" name="terms" required>
+                    <input type="checkbox"
+                           id="terms"
+                           name="terms"
+                           required>
+
                     <label for="terms">
                         I agree to the Terms and Conditions
                         and confirm that the information
@@ -72,9 +124,20 @@
             </fieldset>
 
             <div class="form-buttons">
-                <button type="submit" class="submit-button">Register as Admin</button>
-                <button type="reset" class="reset-button">Clear Form</button>
+
+                <button type="submit" class="submit-button">
+                    Register as Admin
+                </button>
+
+                <button type="reset"
+                        class="reset-button"
+                        id="clearForm">
+                    Clear Form
+                </button>
+
             </div>
+
+            <p id="validationMessage"></p>
 
         </form>
     </main>
@@ -84,6 +147,7 @@
             Already have an admin account?
             <a href="../common/login/login.html">Login Here</a>
         </p>
+
         <p>&copy; 2026 Student Marketplace and Rental</p>
     </footer>
 
