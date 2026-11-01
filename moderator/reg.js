@@ -55,14 +55,17 @@ form.addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // Department Validation (optional, but if filled must be valid)
+    // Department Validation (optional)
 if (department !== "" && !/^[A-Za-z\s&.\-]+$/.test(department)) {
     showError("departmentError", "Department should contain only letters");
     isValid = false;
 }
 
-// Student ID Validation (optional, but if filled must be valid)
-if (studentId !== "" && !/^[0-9\-]{5,15}$/.test(studentId)) {
+// Student ID Validation 
+if (studentId === "") {
+    showError("studentIdError", "Student ID cannot be empty");
+    isValid = false;
+} else if (!/^[0-9\-]{5,15}$/.test(studentId)) {
     showError("studentIdError", "Student ID can contain only digits and dashes (5-15 characters)");
     isValid = false;
 }
