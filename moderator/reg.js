@@ -19,7 +19,7 @@ form.addEventListener("submit", function(event) {
 
     let isValid = true;
 
-    // Name Validation (only letters)
+    //  Name Validation
     if (name === "") {
         showError("nameError", "Full Name cannot be empty");
         isValid = false;
@@ -28,67 +28,67 @@ form.addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // Username Validation (only letters)
+    //  Username Validation
     if (username === "") {
         showError("usernameError", "Username cannot be empty");
         isValid = false;
-    } else if (!/^[A-Za-z]+$/.test(username)) {
-        showError("usernameError", "Username should contain only letters");
+    } else if (username.length < 4) {
+        showError("usernameError", "Username must be at least 4 characters");
         isValid = false;
     }
 
-    // Email Validation ( @gmail.com)
+    //  Email Validation
     if (email === "") {
         showError("emailError", "Email cannot be empty");
         isValid = false;
-    } else if (!/^[^\s@]+@gmail\.com$/i.test(email)) {
-        showError("emailError", "Email must end with @gmail.com");
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError("emailError", "Enter a valid email address");
         isValid = false;
     }
 
-    // Phone Validation (11 digits)
+    // Phone Validation
     if (phone === "") {
         showError("phoneError", "Phone number cannot be empty");
         isValid = false;
     } else if (!/^\d{11}$/.test(phone)) {
-        showError("phoneError", "Phone must be exactly 11 digits");
+        showError("phoneError", "Phone must be 11 digits only");
         isValid = false;
     }
 
-    // Department Validation (cannot be empty)
-    if (department === "") {
-        showError("departmentError", "Department cannot be empty");
-        isValid = false;
-    }
+    // Department Validation (optional, but if filled must be valid)
+if (department !== "" && !/^[A-Za-z\s&.\-]+$/.test(department)) {
+    showError("departmentError", "Department should contain only letters");
+    isValid = false;
+}
 
-    // Student ID Validation (only numbers)
-    if (studentId === "") {
-        showError("studentIdError", "Student ID cannot be empty");
-        isValid = false;
-    } else if (!/^\d+$/.test(studentId)) {
-        showError("studentIdError", "Student ID should contain only numbers");
-        isValid = false;
-    }
+// Student ID Validation (optional, but if filled must be valid)
+if (studentId !== "" && !/^[0-9\-]{5,15}$/.test(studentId)) {
+    showError("studentIdError", "Student ID can contain only digits and dashes (5-15 characters)");
+    isValid = false;
+}
 
-    // Password Validation (minimum 8 char)
+    // Password Validation
     if (password === "") {
         showError("passwordError", "Password cannot be empty");
         isValid = false;
-    } else if (password.length < 8) {
-        showError("passwordError", "Password must be at least 8 characters");
+  } else if (password.length < 6) {
+    showError("passwordError", "Password must be at least 6 characters");
+        isValid = false;
+    } else if (!/\d/.test(password)) {
+        showError("passwordError", "Password must contain at least one number");
         isValid = false;
     }
 
-    // Confirm Password (minimum 8 char)
+    // Confirm Password
     if (confirmPassword === "") {
         showError("confirmError", "Please confirm your password");
         isValid = false;
-    } else if (confirmPassword.length < 8) {
-        showError("confirmError", "Confirm password must be at least 8 characters");
+    } else if (password !== confirmPassword) {
+        showError("confirmError", "Passwords do not match");
         isValid = false;
     }
 
-    // Terms Checkbox
+    //  Terms Checkbox
     if (!terms) {
         showError("termsError", "You must agree to the Terms and Conditions");
         isValid = false;
