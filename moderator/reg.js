@@ -38,13 +38,13 @@ form.addEventListener("submit", function(event) {
     }
 
     //  Email Validation
-    if (email === "") {
-        showError("emailError", "Email cannot be empty");
-        isValid = false;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showError("emailError", "Enter a valid email address");
-        isValid = false;
-    }
+if (email === "") {
+    showError("emailError", "Email cannot be empty");
+    isValid = false;
+} else if (!/^[a-zA-Z0-9._%+-]+@student\.aiub\.edu$/.test(email)) {
+    showError("emailError", "Please enter a valid AIUB student email (@student.aiub.edu)");
+    isValid = false;
+}
 
     // Phone Validation
     if (phone === "") {
